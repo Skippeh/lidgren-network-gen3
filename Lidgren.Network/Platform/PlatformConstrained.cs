@@ -34,8 +34,10 @@ namespace Lidgren.Network
 				{
 					return null;
 				}
-				return IPAddress.Parse(UnityEngine.Network.player.externalIP);
-			}
+                // Line below doesn't work with getting over it for the moment because the game doesn't reference the Unity.Networking module
+				//return IPAddress.Parse(UnityEngine.Network.player.externalIP);
+                return null;
+            }
 			catch // Catch Access Denied errors
 			{
 				return null;
